@@ -1,0 +1,18 @@
+<div class="selection-wrap  border-rounded">
+    <div class="text-center">
+        <a href="#!/{{list}}"><span  class="glyphicon glyphicon-chevron-left float-left margin-big-left"></span></a>
+        <span>新闻详情</span>
+        <span class="glyphicon glyphicon-bookmark float-right margin-big-right" ng-click="clect()" ng-class="{'text-green':clect_flag==1}"></span>
+        <div class="clear"></div>
+    </div>
+</div>
+<h1 class="text-center text-bold">
+    {{title}}
+</h1>
+<h4 class="text-center">{{ptime|my_date|date:"yyyy年MM月dd日 HH时mm分"}}</h4>
+<div>
+    <img ng-src="{{imgsrc}}" class="detail_img">
+</div>
+<div class="container">
+    <h1 class="margin-big-top text-center">{{digest}}</h1>
+</div>

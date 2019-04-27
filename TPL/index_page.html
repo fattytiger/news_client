@@ -1,0 +1,83 @@
+<div ng-controller="index_news">
+    <div class="container-fluid my_nav text-center">
+        <a href="#!/home"><span class="glyphicon glyphicon-user "></span></a>
+        <a href=""><span>爱新闻</span></a>
+        <a href="#!/search_news/{{flag}}"><span class="glyphicon glyphicon-search "></span></a>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_title">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="nav_title">
+                <ul class="nav navbar-nav news_items">
+                    <button class="btn btn-info margin-left" ng-repeat="item in news_list"  ng-click="change_news($index)" ng-model="flag" ng-class="{'btn-danger':$index==flag}">{{item.name}}</button>
+                    <a href="#!/management/{{flag}}" class="float-right"><span class="glyphicon glyphicon-plus"></span></a>
+                    <div class="clear"></div>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--轮播图-->
+    <div class="container-fluid">
+        <div id="lunboImage" class="carousel slide" data-ride="carousel" data-interval="1000">
+            <ol class="carousel-indicators">
+                <li data-target="#lunboImage" data-slide-to="0" class="active"></li>
+                <li data-target="#lunboImage" data-slide-to="1" ></li>
+                <li data-target="#lunboImage" data-slide-to="2" ></li>
+                <li data-target="#lunboImage" data-slide-to="3" ></li>
+                <li data-target="#lunboImage" data-slide-to="4" ></li>
+            </ol>
+            <div class="carousel-inner wrap-lunbo" role="listbox">
+                <div class="item active" >
+                    <img src="{{lunbo_image[0]}}">
+                </div>
+                <div class="item">
+                    <img src="{{lunbo_image[1]}}">
+                </div>
+                <div class="item">
+                    <img src="{{lunbo_image[2]}}">
+                </div>
+                <div class="item">
+                    <img src="{{lunbo_image[3]}}">
+                </div>
+                <div class="item">
+                    <img  src="{{lunbo_image[4]}}">
+                </div>
+            </div>
+            <a class="left carousel-control" href="#lunboImage" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#lunboImage" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+    <div class="margin-big-top bg-info " ng-repeat="item in news_data" >
+            <div class="media visible-md visible-lg">
+                <div class="media-left media-middle">
+                    <a  href="#!/news_detail" >
+                        <img class="media-object media_img img-thumbnail margin" src="{{item.imgsrc}}"  ng-click="getParam($index)">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h2><a href="#!/news_detail/{{$index}}/{{flag}}" ng-model="detail_index">{{item.title}}</a></h2>
+                    <h4 class="margin-big-top">{{item.ptime|my_date|date:"yyyy年MM月dd日 HH时mm分"}}</h4>
+                </div>
+            </div>
+            <div class="visible-sm visible-xs small_s">
+                <div class="small_screen">
+                    <img src="{{item.imgsrc}}" class="img-thumbnail" href="#!/news_detail">
+                </div>
+                <h2 class="text-center small_h2"><a href="#!/news_detail">{{item.title}}</a></h2>
+                <h4 class="text-center">{{item.ptime|my_date|date:"yyyy年MM月dd日 HH时mm分"}}</h4>
+            </div>
+    </div>
+</div>
+

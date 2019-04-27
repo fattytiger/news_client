@@ -1,0 +1,25 @@
+<div class="selection-wrap  border-rounded" ng-controller="selection">
+    <div class="text-center">
+        <a href="#!/home"><span  class="glyphicon glyphicon-chevron-left float-left margin-big-left"></span></a>
+        <span>我的收藏</span>
+        <div class="clear"></div>
+    </div>
+    <div class="container box-shadow margin-big-top" ng-repeat="item in selection" >
+        <div class="media visible-md visible-lg">
+            <div class="media-left media-middle">
+                <img class="media-object media_img img-thumbnail margin" src="{{item.imgsrc}}">
+            </div>
+            <div class="media-body">
+                <h2 class="text-black text-bold">{{item.title}}</h2>
+                <h4 class="margin-big-top text-black text-bold">{{item.ptime|my_date|date:"yyyy年MM月dd日 HH时mm分"}}</h4>
+            </div>
+        </div>
+        <div class="visible-sm visible-xs small_s">
+            <div class="small_screen ">
+                <img src="{{item.imgsrc}}" class="img-thumbnail">
+            </div>
+            <h2 class="text-center small_h2 text-black text-bold">{{item.title}}</h2>
+            <h4 class="text-center text-black text-bold">{{item.ptime|my_date|date:"yyyy年MM月dd日 HH时mm分"}}</h4>
+        </div>
+    </div>
+</div>

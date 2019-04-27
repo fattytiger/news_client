@@ -1,0 +1,135 @@
+.my_nav{
+    line-height: 50px;
+    background-color: #D43D3D;
+}
+.my_nav>a{
+    font-size: 20px;
+    color:#FFFFFF;
+}
+.my_nav>a:nth-child(1){
+    float: left;
+}
+.my_nav>a:nth-child(3){
+    float: right;
+}
+.news_items{
+    height: 80px;
+    width: 100%;
+    line-height: 80px;
+    font-size: 25px;
+}
+.news_items>a{
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+.item_block{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #000000;
+}
+.wrap-lunbo{
+    height: 300px;
+}
+.wrap-lunbo img{
+    width: 100%;
+    overflow: hidden;
+}
+.media_img{
+    height: 128px;
+    width: 128px;
+}
+.small_s{
+    position: relative;
+}
+.small_screen{
+    height: 400px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+.small_screen>img{
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    left: 0;
+    right: 0;
+    top: 10px;
+    margin: auto;
+}
+.small_s>h2{
+    display: block;
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+}
+.small_s>h4{
+    display:inline-block;
+    height: 18px;
+    width: 100%;
+    position: absolute;
+    font-size: 15px;
+    bottom: 0;
+}
+.home_img{
+    margin-top: 50px;
+}
+.home_img a{
+    color:#000000;
+    font-size: 25px;
+}
+.home_img a:hover{
+    color: #555555;
+}
+.home_wrap{
+    margin-top: 100px;
+}
+.user_info{
+    margin-top: 10px;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    font-size: 25px;
+}
+.user_info:nth-of-type(1){
+    color: #2e8ded;
+}
+.user_info:nth-of-type(3){
+    color: #ff0000;
+}
+.selection-wrap{
+    height: 50px;
+    background: #D43D3D;
+    color: #FFFFFF;
+}
+.selection-wrap a{
+    color:  #FFFFFF;
+}
+.selection-wrap span{
+    line-height: 50px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.search-wrap{
+    height: 50px;
+    width: 100%;
+    background: #cccccc;
+}
+.search-inner:before{
+    content: "";
+    display: block;
+    height: 0;
+    width: 100%;
+}
+.search-inner{
+    height: 30px;
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 5%;
+}
+.detail_img{
+    height: 500px;
+    width: 80%;
+    margin-left: 10%;
+}

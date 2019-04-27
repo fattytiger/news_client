@@ -1,0 +1,39 @@
+<div class="selection-wrap  border-rounded">
+    <div class="text-center"><a href="#!/"><span  class="glyphicon glyphicon-chevron-left float-left margin-big-left"></span></a><span>搜索</span><div class="clear"></div></div>
+</div>
+<div class="search-wrap ">
+    <input type="text" class="search-inner" ng-model="search">
+</div>
+<div ng-if="!search" class="text-center">
+    <span class="glyphicon glyphicon-option-horizontal"></span>
+</div>
+<div ng-if="search">
+    <div class="margin-big-top bg-info " ng-repeat="item in news_data|filter:{'title':search}" >
+        <div class="media visible-md visible-lg">
+            <div class="media-left media-middle">
+                <a  href="#!/news_detail" >
+                    <img class="media-object media_img img-thumbnail margin" src="{{item.imgsrc}}"   ng-click="getParam($index)">
+                </a>
+            </div>
+            <div class="media-body">
+                <h2><a href="#!/news_detail">{{item.title}}</a></h2>
+                <h4 class="margin-big-top">{{item.ptime|my_date|date:"yyyy年MM月dd日 HH时mm分"}}</h4>
+            </div>
+        </div>
+        <div class="visible-sm visible-xs small_s">
+            <div class="small_screen">
+                <img src="{{item.imgsrc}}" class="img-thumbnail" href="#!/news_detail">
+            </div>
+            <h2 class="text-center small_h2"><a href="#!/news_detail">{{item.title}}</a></h2>
+            <h4 class="text-center">{{item.ptime|my_date|date:"yyyy年MM月dd日 HH时mm分"}}</h4>
+        </div>
+    </div>
+</div>
+
+<!--<ul>-->
+    <!--<li ng-repeat="item in news_data" class="border-bottom">-->
+        <!--<img ng-src="{{item.imgsrc}}" alt="" class="float-left padding" width="300px" height="200px">-->
+        <!--<h2 ng-bind="item.title" class="padding-top" ></h2>-->
+        <!--<div class="clear"></div>-->
+    <!--</li>-->
+<!--</ul>-->
